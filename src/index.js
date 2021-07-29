@@ -22,7 +22,7 @@ class TagCache {
   options: Options;
 
   constructor(options?: Options = {}) {
-    this.redis = new Redis(options.redis || {});
+    this.redis = new Redis.Cluster(options.redis || {});
     this.options = options;
   }
 
